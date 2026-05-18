@@ -1,1 +1,4 @@
-so like a vex thing lib idk ill figure it out
+# vatlib
+one day 17760V's programmer thought he wanted a student-centered library. thus here we are.
+## how 2 use
+so download the repo then build and upload from pros after making changes in main.cpp and autons.json (todo: jason autons)

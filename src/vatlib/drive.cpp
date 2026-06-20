@@ -1,6 +1,6 @@
 #include "vatlib/drive.hpp"
-
-template <typename T> T Drive::ADJUST_TO_CURVE(T input) {
+#include <cmath>
+template <typename T> T vat::Drive::ADJUST_TO_CURVE(T input) {
     // Adjust the input to a curve for better control
     if (std::abs(input) < JOYSTICK_DEADZONE) {
         return 0;  // Return 0 if within deadzone

@@ -29,6 +29,7 @@ void initialize() {
 	pros::lcd::set_text(1, "Hello PROS User!");
 
 	pros::lcd::register_btn1_cb(on_center_button);
+	// yeah im not sure what to do besides register the imu and whatnot.
 }
 
 /**
@@ -36,7 +37,9 @@ void initialize() {
  * the VEX Competition Switch, following either autonomous or opcontrol. When
  * the robot is enabled, this task will exit.
  */
-void disabled() {}
+void disabled() {
+	// todo: make it recalibrate imu every couple of seconds
+}
 
 /**
  * Runs after initialize(), and before autonomous when connected to the Field
@@ -47,7 +50,9 @@ void disabled() {}
  * This task will exit when the robot is enabled and autonomous or opcontrol
  * starts.
  */
-void competition_initialize() {}
+void competition_initialize() {
+	// todo: add auton selector (buttons, programmable, etc.)
+}
 
 /**
  * Runs the user autonomous code. This function will be started in its own task
@@ -60,7 +65,10 @@ void competition_initialize() {}
  * will be stopped. Re-enabling the robot will restart the task, not re-start it
  * from where it left off.
  */
-void autonomous() {}
+void autonomous() {
+	soloAWP();
+	// todo: make it run the selected routine.
+}
 
 /**
  * Runs the operator control code. This function will be started in its own task
@@ -76,6 +84,7 @@ void autonomous() {}
  * task, not resume it from where it left off.
  */
 void opcontrol() {
+	// todo: add special higher-level functions for control (similar to vexcode instead of pros)
 	pros::Controller master(pros::E_CONTROLLER_MASTER);
 	pros::MotorGroup left_mg({1, -2, 3});    // Creates a motor group with forwards ports 1 & 3 and reversed port 2
 	pros::MotorGroup right_mg({-4, 5, -6});  // Creates a motor group with forwards port 5 and reversed ports 4 & 6

@@ -7,6 +7,8 @@
  * "I was pressed!" and nothing.
  */
 
+using namespace pros;
+using namespace vat;
 
 void on_center_button() {
 	static bool pressed = false;
